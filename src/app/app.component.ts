@@ -14,17 +14,26 @@ export class AppComponent {
   month: number = this.currentTime.getMonth() + 1;
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
-
+  show: boolean = true;
 
   tasks: Task[] = [
-    new Task('Finish weekend Angular homework', 'High'),
-    new Task('Begin brainstroming possible JS group projects','Medium'),
-    new Task('Add Readme file to last few Angular repos on Github', 'Low')
+    new Task('Finish weekend Angular homework', 1),
+    new Task('Begin brainstroming possible JS group projects', 2),
+    new Task('Add Readme file to last few Angular repos on Github', 3)
   ];
 
   editTask() {
-    alert("Time to edit a task!");
+    alert("Time to edit a tasks")
   }
-}
 
- // <button (click)="editTask()">Edit</button> 
+  priorityColor(currentTask) {
+    if (currentTask.priority === 3) {
+      return "bg-danger";
+    } else if (currentTask.priority === 2) {
+      return "bg-warning";
+    } else {
+      return "bg-info";
+    }
+  }
+
+}

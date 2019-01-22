@@ -1,11 +1,11 @@
-export class Day {
-  tasks: Task[] = [];
-
-  addTask(description: string, priority: string) {
-    const task = new Task(description, priority);
-    this.tasks.push(task);
-  }
-}
+// export class Day {
+//   tasks: Task[] = [];
+//
+//   addTask(description: string, priority: number) {
+//     const task = new Task(description, priority);
+//     this.tasks.push(task);
+//   }
+// }
 
 // let tasks: Task[] = [];
 // tasks.push(new Task('Do the dishes.', 'Medium'));

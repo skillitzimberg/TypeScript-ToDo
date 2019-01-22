@@ -5,5 +5,7 @@
   <h3>{{currentFocus}}</h3>
 
   <ul>
-    <li *ngFor="let currentTask of tasks" (click)="editTask()">{{currentTask.description}}</li>
+    <li [class]="priorityColor(currentTask)" *ngFor="let currentTask of tasks" (click)="priority =currentTask.displayPriority()">{{currentTask.description}}</li>
   </ul>
+
+  <p>{{ priority }}</p>
