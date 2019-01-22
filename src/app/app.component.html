@@ -4,6 +4,12 @@
   <h3>Tasks for {{month}}/{{day}}/{{year}}</h3>
   <h3>{{currentFocus}}</h3>
 
+  <h1>Welcome, {{userName}}!</h1>
+
+  <form>
+    <input type="text" name="user" [(ngModel)]="userName" value="">
+  </form>
+
   <ul>
     <li [class]="priorityColor(currentTask)" *ngFor="let currentTask of tasks" (click)="priority =currentTask.displayPriority()">{{currentTask.description}}</li>
   </ul>
