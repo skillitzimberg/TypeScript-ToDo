@@ -14,7 +14,6 @@ export class AppComponent {
   month: number = this.currentTime.getMonth() + 1;
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
-  show: boolean = true;
 
   tasks: Task[] = [
     new Task('Finish weekend Angular homework', 1),
@@ -22,8 +21,10 @@ export class AppComponent {
     new Task('Add Readme file to last few Angular repos on Github', 3)
   ];
 
-  editTask() {
-    alert("Time to edit a tasks")
+  selectedTask = null;
+
+  editTask(clickedTask) {
+    this.selectedTask = clickedTask;
   }
 
   priorityColor(currentTask) {
@@ -34,6 +35,10 @@ export class AppComponent {
     } else {
       return "bg-info";
     }
+  }
+
+  finishedEditing() {
+    this.selectedTask = null;
   }
 
 }
