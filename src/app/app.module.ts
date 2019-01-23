@@ -1,13 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { NgLoopDirective } from './ng-loop.directive';
 import { FormsModule } from '@angular/forms';
+import { HeadComponent } from './head/head.component';
+import { ListComponent } from './list/list.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NgLoopDirective
+    HeadComponent,
+    ListComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
